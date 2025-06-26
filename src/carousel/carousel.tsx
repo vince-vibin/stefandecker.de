@@ -26,7 +26,7 @@ const slides = [
   },
 ];
 
-function Slide({ image }) {
+function Slide({ image }: { image: string }) {
   return (
     <Card 
       shadow="md" 
@@ -45,15 +45,8 @@ export default function CarouselComponent() {
   return (
     <Carousel
       slideSize="100%"
-      breakpoints={[
-        { maxWidth: 'md', slideSize: '50%' },
-        { maxWidth: 'sm', slideSize: '100%' },
-      ]}
       slideGap="md"
-      align="start"
-      loop
       withIndicators
-      
     >
       {slides.map((slide, index) => (
         <Carousel.Slide key={index}>
