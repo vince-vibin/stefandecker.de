@@ -4,25 +4,25 @@ import '@mantine/carousel/styles.css';
 
 const slides = [
   {
-    image: '../../assets/page1.png',
+    image: 'page1.png',
   },
   {
-    image: '../../assets/page2.png',
+    image: 'page2.png',
   },
   {
-    image: '../../assets/page3.png',
+    image: 'page3.png',
   },
   {
-    image: '../../assets/page4.png',
+    image: 'page4.png',
   },
   {
-    image: '../../assets/page5.png',
+    image: 'page5.png',
   },
   {
-    image: '../../assets/page6.png',
+    image: 'page6.png',
   },
   {
-    image: '../../assets/page7.png',
+    image: 'page7.png',
   },
 ];
 
@@ -35,7 +35,7 @@ function Slide({ image }: { image: string }) {
       withBorder
     >
       <Card.Section>
-        <Image src={image} width="100%" height="auto" />
+        <Image src={`${import.meta.env.BASE_URL}assets/${image}`} width="100%" height="auto" />
       </Card.Section>
     </Card>
   );
