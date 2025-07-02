@@ -1,6 +1,8 @@
 import { MantineProvider, createTheme, type MantineColorsTuple } from '@mantine/core';
 import '@mantine/core/styles.css';
 import CarouselComponent from './carousel/carousel';
+import { TitleComponent } from './title/title';
+import { FooterComponent } from './footer/footer';
 
 const myColor: MantineColorsTuple = [
   '#fcf6e7',
@@ -24,8 +26,10 @@ const theme = createTheme({
 export default function App() {
   return <MantineProvider theme={theme}>
     {
-      <div style={{ maxWidth: 800, margin: 'auto', padding: '20px' }}>
+      <div style={{ margin: 'auto', padding: '20px' }}>
+        <TitleComponent />
         <CarouselComponent />
+        <FooterComponent />
       </div>
     }
     </MantineProvider>;
