@@ -35,7 +35,7 @@ export default function CarouselComponent() {
   return (
     <Carousel
       mx="auto"
-      maw={800}
+      maw={1500}
       withControls
       slideSize="90%"
       slideGap="md"
