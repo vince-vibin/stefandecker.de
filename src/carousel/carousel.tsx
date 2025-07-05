@@ -3,30 +3,20 @@ import { Card, Image } from '@mantine/core';
 import '@mantine/carousel/styles.css';
 
 const slides = [
-  {
-    image: 'page1.png',
-  },
-  {
-    image: 'page2.png',
-  },
-  {
-    image: 'page3.png',
-  },
-  {
-    image: 'page4.png',
-  },
-  {
-    image: 'page5.png',
-  },
-  {
-    image: 'page6.png',
-  },
-  {
-    image: 'page7.png',
-  },
+  'page1.png',
+  'page2.png',
+  'page3.png',
+  'page4.png',
+  'page5.png',
+  'page6.png',
+  'page7.png',
 ];
 
-function Slide({ image }: { image: string }) {
+type SlideProps = {
+  image: string;
+};
+
+function Slide({ image }: SlideProps) {
   return (
     <Card 
       shadow="md" 
@@ -44,13 +34,16 @@ function Slide({ image }: { image: string }) {
 export default function CarouselComponent() {
   return (
     <Carousel
-      slideSize="100%"
+      mx="auto"
+      maw={800}
+      withControls
+      slideSize="90%"
       slideGap="md"
       withIndicators
     >
-      {slides.map((slide, index) => (
-        <Carousel.Slide key={index}>
-          <Slide {...slide} />
+      {slides.map((image) => (
+        <Carousel.Slide key={image}>
+          <Slide image={image} />
         </Carousel.Slide>
       ))}
     </Carousel>
