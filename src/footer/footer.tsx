@@ -6,7 +6,7 @@ export function FooterComponent() {
     <footer className={classes.footer}>
       <div className={classes.footerText}>
         <a
-          href="https://github.com/vince-vibin/stefandecker.de"
+          href="https://github.com/vince-vibin/stefandecker.eu"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Checkout the source code of this website on GitHub"
