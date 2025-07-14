@@ -1,13 +1,13 @@
-import { Title, ThemeIcon } from '@mantine/core';
 import classes from "./title.module.css";
 
 export function TitleComponent() {
   return (
     <header className={classes.header}>
-      <ThemeIcon size={60} aria-hidden="true" />
-      <Title order={1} size="4rem" mb="xs">
-          Stefan Decker
-      </Title>
+      <img
+        src={`${import.meta.env.BASE_URL}assets/stefandecker.png`}
+        alt="Logo"
+        className={classes.logo}
+      />
     </header>
   )
 }
